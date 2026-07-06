@@ -1,0 +1,236 @@
+/* =========================
+   HERO BANNER
+========================= */
+
+.hero-banner {
+  background: radial-gradient(circle at top right, rgba(249, 115, 22, 0.2), transparent 60%),
+    linear-gradient(135deg, #18181b 0%, #09090b 100%);
+  color: #fff;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 50px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+  border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-banner p {
+  font-size: 1.15rem;
+  color: #d4d4d8;
+  max-width: 650px;
+}
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-bar {
+  width: 100%;
+  max-width: 500px;
+  padding: 14px 18px;
+  margin: 0 auto 35px;
+  display: block;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: .3s;
+}
+
+.search-bar:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, .15);
+}
+
+/* =========================
+   PRODUCT GRID
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card {
+  background: #18181b;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .05);
+  transition: .35s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .45);
+  border-color: #f97316;
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: .4s;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PRODUCT INFO
+========================= */
+
+.product-info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-info h3 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.price {
+  font-size: 24px;
+  color: #f97316;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.view-btn,
+.product-info a {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  background: #f97316;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+  margin-top: auto;
+}
+
+.view-btn:hover,
+.product-info a:hover {
+  background: #ea580c;
+}
+
+/* =========================
+   PRODUCT DETAIL PAGE
+========================= */
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  background: #18181b;
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid #27272a;
+}
+
+.detail-image {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-info h2 {
+  font-size: 2.4rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.detail-price {
+  font-size: 2rem;
+  color: #f97316;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.detail-info p {
+  color: #a1a1aa;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-banner {
+    padding: 45px 20px;
+    min-height: 220px;
+  }
+
+  .hero-banner h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-banner p {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .detail-info h2 {
+    font-size: 2rem;
+  }
+
+}
